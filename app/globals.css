@@ -1,0 +1,82 @@
+:root {
+  --ink: #1c140e;
+  --paper: #f7f1e8;
+  --card: #fffaf3;
+  --line: #e4d6c4;
+  --mute: #6d5c4d;
+  --ember: #b4532a;
+  --ember-dark: #8a3b1c;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.55;
+}
+a { color: var(--ember-dark); }
+header, footer, main { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 20px;
+  border-bottom: 1px solid var(--line);
+  max-width: none;
+}
+header nav { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.95rem; }
+header a { text-decoration: none; color: var(--ink); }
+.brand { font-weight: 700; letter-spacing: 0.02em; }
+main { padding: 36px 20px 80px; }
+footer {
+  border-top: 1px solid var(--line);
+  padding: 24px 20px 40px;
+  color: var(--mute);
+  font-size: 0.92rem;
+  max-width: none;
+}
+h1 { font-size: 2.1rem; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 1.35rem; margin: 28px 0 10px; }
+.lede { font-size: 1.15rem; color: var(--mute); max-width: 38rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 22px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px;
+}
+.price { font-size: 1.6rem; margin: 8px 0; }
+.btn {
+  display: inline-block;
+  background: var(--ember);
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+input, textarea, select {
+  width: 100%;
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  margin: 6px 0 12px;
+}
+.note { color: var(--mute); font-size: 0.95rem; }
+.stamp {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--ember);
+  margin-right: 6px;
+}
+.stamp.on { background: var(--ember); }
+.row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+code { background: #efe4d6; padding: 2px 6px; border-radius: 6px; }
